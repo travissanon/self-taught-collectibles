@@ -20,7 +20,9 @@ header {
 .list-content {
   &__container {
     min-height: 100%;
-    min-width: 100%;
+    width: 90%;
+    max-width: 100%;
+    float: right;
     margin-bottom: -3vh;
     padding-bottom: 7em;
     display: flex;
