@@ -2,9 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import logo from './vector.svg'
-import './style.scss'
 
 import Header from '../components/header'
+import Divider from '../components/divider'
 
 const data = [
   {
@@ -83,18 +83,19 @@ const data = [
     name: "Simple Mentor",
     description: "Blake currently runs quite a huge instagram and with that he’s also built out a series of tutorials for users.",
     image: "https://s33.postimg.cc/3sr46o67z/simple-mentor.png"
-  }
+  },
 ];
 
 const SecondPage = () => {
   return (
       <div>
-        <Header/>
-        <div className="container-2">
-          <div className="head">
+      <Header/>
+        <div className="list-content__container">
+          <div className="list-content__header">
             <h1>Front End Development</h1>
             <p>This section derives of majority anyone who's really spreading the knowledge of your front-end section of a website. So expect a lot of <span>HTML, CSS, Javascript</span> like tutorials.</p>
           </div>
+          <Divider/>
           <People/>
         </div>
       </div>
@@ -107,17 +108,17 @@ class People extends React.Component {
     data.map((user, i) => {
       listOfPeople.push(<Person yeet={user} key={user.id}/>)
     })
-    return <div className="people">{listOfPeople}</div>
+    return <div className="list-content__people">{listOfPeople}</div>
   }
 }
 
 const Person = ({ yeet, key }) => {
   return (
-    <div className="person">
+    <div className="list-content__person">
       <img src={yeet.image}/>
       <p>Sub Count: {yeet.subCount}</p>
       <h2>{yeet.name}</h2>
-      <p className="desc">{yeet.description}</p>
+      <p className="list-content__description">{yeet.description}</p>
     </div>
   );
 }

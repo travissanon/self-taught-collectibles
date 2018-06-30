@@ -5,18 +5,11 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.css'
+import './styles/_main.scss'
 
 const Layout = ({ children, data }) => (
-  <div>
-    <div
-      style={{
-        margin: '0 auto',
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+  <div className="main">
+    {children()}
     <Footer/>
   </div>
 )
@@ -31,7 +24,6 @@ export default Layout
 //   query SiteTitleQuery {
 //     site {
 //       siteMetadata {
-//         fuck
 //         people {
 //           id
 //           subCount

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+@mixin primary-font() {
+  font-family: 'Libre Baskerville', Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin secondary-font($weight) {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  @if weight == 'bold' {
+    font-weight: 700;
+  } @else {
+    font-weight: 400;
+  }
+}

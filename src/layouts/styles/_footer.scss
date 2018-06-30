@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3vh;
+  margin: 15px auto;
+  max-width: 100%;
+  a {
+    font-size: 0.8em;
+    width: 33.333vw;
+    margin: 0px 25px;
+    opacity: 0.6;
+    border: none;
+    text-decoration: none;
+    color: $color-tundora-grey;
+    span {
+      border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+      padding: 4px 0;
+    }
+  }
+  .center { text-align: center; }
+  .right { text-align: right; }
+}
