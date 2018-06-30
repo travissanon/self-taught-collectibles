@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+.main {
+  display: flex;
+  height: 96.5vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 h1, h2, p {
   color: #424242;
@@ -7,7 +15,8 @@ h1, h2, p {
 
 h1 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
+  font-size: 1.4em;
+  font-weight: 700;
 }
 
 img {
@@ -19,15 +28,19 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 92vh;
   p {
     text-align: center;
-    width: 38em;
+    width: 32em;
   }
 }
 
+// .container-2 {
+//   max-width: 1400px;
+//   margin-left: 6%;
+// }
+
 p {
-  font-size: 16px;
+  font-size: 1em;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -59,10 +72,16 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3.5vh;
+  margin: 15px auto;
   a {
-    font-size: 12px;
-    margin: 0px 15px;
+    font-size: 0.8em;
+    width: 33.333vw;
+    margin: 0px 25px;
     opacity: 0.6;
     border: none;
     span {
@@ -70,6 +89,8 @@ footer {
       padding: 4px 0;
     }
   }
+  .center { text-align: center; }
+  .right { text-align: right; }
 }
 
 header {
@@ -123,9 +144,4 @@ header {
     margin-top: 5px;
     line-height: 18px;
   }
-}
-
-.container-2 {
-  max-width: 1400px;
-  margin-left: 6%;
 }
