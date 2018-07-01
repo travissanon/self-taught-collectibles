@@ -1,0 +1,26 @@
+.header {
+  @include primary-font();
+}
+.header--primary {
+  font-size: 24px;
+}
+
+.body {
+  @include secondary-font(400);
+}
+.body--primary {
+  width: 35em;
+  max-width: 95%;
+  font-size: 16px;
+}
+
+.body--secondary {
+  font-size: 12px;
+  color: rgba(66, 66, 66, 0.6);
+  width: 227px;
+  margin: 0;
+}
+
+span {
+  font-weight: 600;
+}
