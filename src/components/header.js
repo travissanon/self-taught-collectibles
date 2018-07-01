@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
         <Link to="/">Front End Development</Link>
         <Link to="/">Back End Development</Link>
         <Link to="/">Design</Link>
-        <Link to="/">About</Link>
+        <Link to="/about">About</Link>
       </nav>
     </header>
   </div>

@@ -93,7 +93,7 @@ const SecondPage = () => {
         <div className="list-content__container">
           <div className="list-content__header">
             <h1>Front End Development</h1>
-            <p>This section derives of majority anyone who's really spreading the knowledge of your front-end section of a website. So expect a lot of <span>HTML, CSS, Javascript</span> like tutorials.</p>
+            <p class="body body--primary">This section derives of majority anyone who's really spreading the knowledge of your front-end section of a website. So expect a lot of <span>HTML, CSS, Javascript</span> like tutorials.</p>
           </div>
           <Divider/>
           <People/>
@@ -116,7 +116,7 @@ const Person = ({ yeet, key }) => {
   return (
     <div className="list-content__person">
       <img src={yeet.image}/>
-      <p>Sub Count: {yeet.subCount}</p>
+      <p class="body body--secondary">Sub Count: {yeet.subCount}</p>
       <h2>{yeet.name}</h2>
       <p className="list-content__description">{yeet.description}</p>
     </div>
