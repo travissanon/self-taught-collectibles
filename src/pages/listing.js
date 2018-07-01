@@ -95,7 +95,6 @@ const SecondPage = () => {
             <h1>Front End Development</h1>
             <p class="body body--primary">This section derives of majority anyone who's really spreading the knowledge of your front-end section of a website. So expect a lot of <span>HTML, CSS, Javascript</span> like tutorials.</p>
           </div>
-          <Divider/>
           <People/>
         </div>
       </div>

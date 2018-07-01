@@ -7,10 +7,10 @@ const Header = ({ siteTitle }) => (
     <header>
       <img src={logo}/>
       <nav>
-        <Link to="/">Front End Development</Link>
-        <Link to="/">Back End Development</Link>
-        <Link to="/">Design</Link>
-        <Link to="/about">About</Link>
+        <Link to="/listing">Front End Development</Link>
+        <Link to="/listing">Back End Development</Link>
+        <Link to="/listing">Design</Link>
+        <Link to="/">About</Link>
       </nav>
     </header>
   </div>
