@@ -14,7 +14,7 @@ header {
     font-family: 'Open Sans', sans-serif;
     padding: 4px 0;
     color: $color-tundora-grey;
-    border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+    border-bottom: 1px solid $color-tundora-grey-light;
   }
 }
 
@@ -36,7 +36,7 @@ footer {
     text-decoration: none;
     color: $color-tundora-grey;
     span {
-      border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+      border-bottom: 1px solid $color-tundora-grey;
       padding: 4px 0;
     }
   }
@@ -89,7 +89,7 @@ footer {
   }
   p {
     font-size: 12px;
-    color: rgba(66, 66, 66, 0.6);
+    color: $color-tundora-grey-light;
     width: 227px;
     margin: 0;
   }
@@ -151,7 +151,7 @@ footer {
     padding: 4px 0;
     margin: 5px 0;
     color: $color-tundora-grey;
-    border-bottom: 1px solid rgba(66, 66, 66, 0.5); }
+    border-bottom: 1px solid $color-tundora-grey; }
 
   img { fill: $color-tundora-grey; }
 }

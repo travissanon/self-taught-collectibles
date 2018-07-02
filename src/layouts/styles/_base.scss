@@ -25,7 +25,7 @@ html, body {
 
 .body--secondary {
   font-size: 12px;
-  color: rgba(66, 66, 66, 0.6);
+  color: $color-tundora-grey;
   width: 227px;
   margin: 0;
 }
@@ -39,8 +39,8 @@ html, body {
   .dot {
     width: 5px;
     height: 5px;
-    background-color: rgba(66, 66, 66, 0.5);
-    border: 0px solid rgba(66, 66, 66, 0.5);
+    background-color: $color-tundora-grey-light;
+    border: 0px solid $color-tundora-grey-light;
     border-radius: 100%;
     margin: 0 8px 15px 8px;
   }
