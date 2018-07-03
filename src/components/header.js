@@ -5,7 +5,9 @@ import logo from '../pages/vector.svg'
 const Header = ({ siteTitle }) => (
   <div>
     <header>
-      <img src={logo}/>
+      <Link to="/" className={logo}>
+        <img src={logo}/>
+      </Link>
       <nav>
         <Link to="/listing">Front End Development</Link>
         <Link to="/listing">Back End Development</Link>
