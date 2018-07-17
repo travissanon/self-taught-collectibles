@@ -9,12 +9,18 @@ const Header = ({ siteTitle }) => (
         <img src={logo}/>
       </Link>
       <nav>
-        <Link to="/listing">Front End Development</Link>
-        <Link to="/listing">Back End Development</Link>
-        <Link to="/listing">Design</Link>
+        <Link to="/listing/frontend">Front End Development</Link>
+        <Link to="/listing/backend">Back End Development</Link>
+        <Link to="/listing/design">Design</Link>
         <Link to="/about">About</Link>
       </nav>
     </header>
+  </div>
+)
+
+const Test = (
+  <div>
+    <h1>Ayy</h1>
   </div>
 )
 
