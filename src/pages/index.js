@@ -15,9 +15,9 @@ const IndexPage = () => (
       for both development and design.
     </p>
     <Divider/>
-    <Link to="/listing/">Front End Development</Link>
-    <Link to="/listing/">Back End Development</Link>
-    <Link to="/listing/">Design</Link>
+    <Link to="/listing/frontend">Front End Development</Link>
+    <Link to="/listing/backend">Back End Development</Link>
+    <Link to="/listing/design">Design</Link>
   </div>
 )
 
