@@ -5,10 +5,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   img {
-    height: 29px;
+    width: 65px;
   }
-  nav {
-    a {
+  .nav {
+    a, p {
       margin: 0 20px;
       text-decoration: none;
       font-size: 16px;
@@ -17,46 +17,109 @@ header {
       color: $color-tundora-grey;
       border-bottom: 1px solid rgba(66, 66, 66, 0.5);
     }
+    @media screen and (max-width: $bp-med-screen) {
+      position: fixed;
+      right: 0;
+      top: 0;
+      background-color: #fff;
+      height: 100%;
+      width: 50%;
+      box-shadow: -4px 0 2px -2px rgba(0,0,0,0.2);
+    }
+  }
+
+  .nav-desktop {
+    @media screen and (max-width: $bp-med-screen) {
+      display: none;
+    }
+  }
+
+  .nav-toggle {
+    @media screen and (min-width: $bp-med-screen) {
+      display: none;
+    }
+  }
+
+  .nav-mobile {
+    p {
+      border-bottom: none;
+      float: right;
+    }
+    a {
+      display: block;
+      float: left;
+      border-bottom: none;
+      padding: 8px 0;
+      &:nth-child(1) {
+        padding-top: 70px;
+      }
+    }
+    @media screen and (min-width: $bp-med-screen) {
+      display: none;
+    }
   }
 }
 
 // FOOTER
-footer {
+.footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 3vh;
-  float: right;
-  margin: 15px auto;
   max-width: 100%;
+  margin: 10px 0;
+
+  @media screen and (max-width: $bp-small-screen) {
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 0;
+    padding-bottom: 2em;
+  }
   a {
     font-size: 0.8em;
     width: 33.333vw;
-    margin: 0px 25px;
     opacity: 0.6;
+    margin: 0 25px;
     border: none;
     text-decoration: none;
     color: $color-tundora-grey;
+
+    &:nth-child(2) {
+      text-align: center;
+    }
+
+    &:nth-child(3) {
+      text-align: right;
+    }
+
+    @media screen and (max-width: $bp-small-screen) {
+      width: 300px;
+      margin: 0;
+      text-align: center;
+      padding: 0.5em 0;
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        text-align: center;
+      }
+    }
+
     span {
-      border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+      border-bottom: 1px solid rgba(66, 66, 66, .5);
       padding: 4px 0;
     }
   }
-  .center { text-align: center; }
-  .right { text-align: right; }
 }
 
 // LISTING PAGE
 .list-content {
   &__container {
-    min-height: 100%;
-    width: 90%;
-    max-width: 100%;
-    float: right;
-    margin-bottom: -3vh;
-    padding-bottom: 7em;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    margin-left: 10%;
+    margin-bottom: -3vh;
+    padding-bottom: 7em;
   }
   &__header {
     padding-left: 20px;
@@ -138,7 +201,7 @@ footer {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  margin-bottom: -3vh;
+
   h1 {
     @include primary-font();
     color: $color-tundora-grey;
@@ -147,12 +210,12 @@ footer {
     text-align: center;
     color: $color-tundora-grey;
     width: 32em;
-    max-width: 90%;
+    max-width: 80%;
     font-size: 1em;
     font-family: 'Open Sans', sans-serif; }
   a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1em;
     font-family: 'Open Sans', sans-serif;
     padding: 4px 0;
     margin: 5px 0;

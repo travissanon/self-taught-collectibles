@@ -1,14 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Layout from "../components/index"
 import Helmet from 'react-helmet'
 import logo from './vector.svg'
 
 import Header from '../components/header'
-import Divider from '../components/divider'
+import Footer from '../components/footer'
 
 const ThirdPage = () => {
   return (
-      <div>
+      <Layout>
         <Header/>
         <div className="container">
           <div className="about-block">
@@ -35,7 +35,8 @@ const ThirdPage = () => {
             </ul>
           </div>
         </div>
-      </div>
+        <Footer/>
+      </Layout>
   );
 }
 
