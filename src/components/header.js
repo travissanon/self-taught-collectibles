@@ -19,9 +19,11 @@ class Header extends Component {
     const menu = (
       <div className="nav nav-mobile">
         <p onClick={this.handleClick}>X</p>
-        <Link to="/listing/development">Development</Link>
-        <Link to="/listing/design">Design</Link>
-        <Link to="/about">About</Link>
+        <div className="nav-mobile__container">
+          <Link to="/listing/development">Development</Link>
+          <Link to="/listing/design">Design</Link>
+          <Link to="/about">About</Link>
+        </div>
       </div>
     );
 

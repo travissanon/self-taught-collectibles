@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Divider from '../components/divider';
 
 const SecondPage = ({ location }) => (
    <StaticQuery
@@ -57,12 +58,15 @@ const SecondPage = ({ location }) => (
     render={data => (
       <Layout>
         <Header/>
-        <div className="list-content__container">
-          <div className="list-content__header">
-            <h1>{data.site.siteMetadata.professionTitle[location.pathname.split("/").pop()]}</h1>
-            <p className="body body--primary">{data.site.siteMetadata.professionDescription[location.pathname.split("/").pop()]}</p>
+        <div className="list-content">
+          <div className="list-content__container">
+            <div className="list-content__header">
+              <h1>{data.site.siteMetadata.professionTitle[location.pathname.split("/").pop()]}</h1>
+              <p className="body body--primary">{data.site.siteMetadata.professionDescription[location.pathname.split("/").pop()]}</p>
+            </div>
+            <Divider />
+            <People data={data} location={location.pathname.split("/").pop()}/>
           </div>
-          <People data={data} location={location.pathname.split("/").pop()}/>
         </div>
         <Footer/>
       </Layout>

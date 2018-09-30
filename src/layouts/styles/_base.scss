@@ -33,7 +33,7 @@ html, body {
 .section-divider {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  justify-content: center;
   padding: 1em 0;
   width: inherit;
   .dot {

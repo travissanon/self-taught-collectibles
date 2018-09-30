@@ -7,7 +7,7 @@ module.exports = {
     },
     professionDescription: {
       development: 'This section derives of majority anyone who\'s really spreading the knowledge of your front-end section of a website. So expect a lot of HTML, CSS, Javascript like tutorials.',
-      design: 'Texty bois.',
+      design: 'This section derives of designers that dive into deep design concepts as well as tangible tutorials for you to complete.',
     }
   },
   plugins: [
