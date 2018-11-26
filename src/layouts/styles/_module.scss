@@ -129,6 +129,7 @@ header {
 
   &__container {
     max-width: 100%;
+    padding-bottom: 15%;
   }
   &__header {
     max-width: 80%;
@@ -158,7 +159,7 @@ header {
     grid-gap: 65px 32px;
     max-width: 100%;
     padding-top: 25px;
-    padding-bottom: 100px;
+
     @media screen and (max-width: 1339px) {
       grid-template-columns: 227px 227px 227px 227px;
     }
@@ -209,7 +210,7 @@ header {
 .container {
   max-width: 75%;
   margin: 0 auto;
-  padding-bottom: 200px;
+  padding-bottom: 15%;
   padding-top: 8%;
 }
 

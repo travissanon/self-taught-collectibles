@@ -1,9 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
@@ -19,6 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
               description
               image
               profession
+              website
             }
           }
         }
@@ -33,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
     professions.forEach((profession) => {
       createPage({
-        path: `listing/${profession}`,
+        path: `/${profession}`,
         component: path.resolve(`./src/templates/secondPage.js`),
         context: {
           listing: profession

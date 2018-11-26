@@ -20,8 +20,8 @@ class Header extends Component {
       <div className="nav nav-mobile">
         <p onClick={this.handleClick}>X</p>
         <div className="nav-mobile__container">
-          <Link to="/listing/development">Development</Link>
-          <Link to="/listing/design">Design</Link>
+          <Link to="/development">Development</Link>
+          <Link to="/design">Design</Link>
           <Link to="/about">About</Link>
         </div>
       </div>
@@ -34,8 +34,8 @@ class Header extends Component {
             <img src={logo}/>
           </Link>
           <div className="nav nav-desktop">
-            <Link to="/listing/development">Development</Link>
-            <Link to="/listing/design">Design</Link>
+            <Link to="/development">Development</Link>
+            <Link to="/design">Design</Link>
             <Link to="/about">About</Link>
           </div>
           <p className="nav-toggle" onClick={this.handleClick}>Menu</p>

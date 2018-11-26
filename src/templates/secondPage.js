@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from "../components/index"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-// import logo from './vector.svg'
+// import Img from "gatsby-image"
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -48,6 +47,7 @@ const SecondPage = ({ location }) => (
               description
               image
               profession
+              website
             }
           }
         }
@@ -62,6 +62,7 @@ const SecondPage = ({ location }) => (
           <div className="list-content__container">
             <div className="list-content__header">
               <h1>{data.site.siteMetadata.professionTitle[location.pathname.split("/").pop()]}</h1>
+              {console.log(data.site.siteMetadata.professionTitle)}
               <p className="body body--primary">{data.site.siteMetadata.professionDescription[location.pathname.split("/").pop()]}</p>
             </div>
             <Divider />
@@ -87,7 +88,9 @@ const People = ({ data, location }) => {
 const Person = ({ person, image, key }) => {
   return (
     <div className="list-content__person" key={key}>
-      <img src={image[0].node.fluid.src} />
+      <a href={person.website}>
+        <img src={image[0].node.fluid.src} />
+      </a>
       <p className="body body--secondary">Sub Count: {person.subCount}</p>
       <h2>{person.name}</h2>
       <p className="list-content__description">{person.description}</p>
@@ -96,33 +99,3 @@ const Person = ({ person, image, key }) => {
 }
 
 export default SecondPage
-
-// export const query = graphql`
-//   query People {
-//     site {
-//       siteMetadata {
-//         title
-//         professionTitle {
-//           development
-//           design
-//         }
-//         professionDescription {
-//           development
-//           design
-//         }
-//       }
-//     }
-
-//     allPeopleJson {
-//       edges {
-//         node {
-//           id
-//           subCount
-//           name
-//           description
-//           image
-//           profession
-//         }
-//       }
-//     }
-//   }`
