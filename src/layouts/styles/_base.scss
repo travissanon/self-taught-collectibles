@@ -1,9 +1,22 @@
-html, body {
+html {
+  min-height: 100%;
+}
+
+body {
   height: 100%;
+  position: relative;
   margin: 0;
 }
 
+.layout-wrapper {
+  height: 100vh;
+}
+
 .home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -46,15 +59,16 @@ html, body {
   }
 }
 
-span { 
-  font-weight: 600 
+span {
+  font-weight: 600;
 }
 
-a { 
-  @include secondary-font(400); 
+a {
+  @include secondary-font(400);
 }
 
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
 }

@@ -5,7 +5,7 @@
 
 // HEADER
 header {
-  margin: 35px 17px;
+  padding: 35px 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +13,8 @@ header {
     width: 65px;
   }
   .nav {
-    a, p {
+    a,
+    p {
       margin: 0 20px;
       text-decoration: none;
       font-size: 16px;
@@ -29,7 +30,7 @@ header {
       background-color: #fff;
       height: 100%;
       width: 50%;
-      box-shadow: -4px 0 2px -2px rgba(0,0,0,0.2);
+      box-shadow: -4px 0 2px -2px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -75,7 +76,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
-  margin: 10px 0;
+  padding-bottom: 10px;
 
   @media screen and (max-width: $bp-small-screen) {
     flex-direction: column;
@@ -86,8 +87,8 @@ header {
   a {
     font-size: 0.8em;
     width: 33.333vw;
-    opacity: 0.6;
     margin: 0 25px;
+    opacity: 0.6;
     border: none;
     text-decoration: none;
     color: $color-tundora-grey;
@@ -114,9 +115,14 @@ header {
     }
 
     span {
-      border-bottom: 1px solid rgba(66, 66, 66, .5);
+      border-bottom: 1px solid rgba(66, 66, 66, 0.5);
       padding: 4px 0;
     }
+  }
+
+  &--home {
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -207,7 +213,7 @@ header {
 
 // ABOUT PAGE
 
-.container {
+.about-container {
   max-width: 75%;
   margin: 0 auto;
   padding-bottom: 15%;
@@ -233,19 +239,20 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
 
   h1 {
     @include primary-font();
     color: $color-tundora-grey;
-    font-size: 1.4em; }
+    font-size: 1.4em;
+  }
   p {
     text-align: center;
     color: $color-tundora-grey;
     width: 32em;
     max-width: 80%;
     font-size: 1em;
-    font-family: 'Open Sans', sans-serif; }
+    font-family: 'Open Sans', sans-serif;
+  }
   a {
     text-decoration: none;
     font-size: 1em;
@@ -253,7 +260,10 @@ header {
     padding: 4px 0;
     margin: 5px 0;
     color: $color-tundora-grey;
-    border-bottom: 1px solid rgba(66, 66, 66, 0.5); }
+    border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  }
 
-  img { fill: $color-tundora-grey; }
+  img {
+    fill: $color-tundora-grey;
+  }
 }
