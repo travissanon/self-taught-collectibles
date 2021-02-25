@@ -15,7 +15,7 @@
     "description": "Weekly videos on the subject of development, and even personal development. Also including some tangible development tutorials, plus a hint of design.",
     "image": "dev-tips.jpg",
     "profession": "development",
-    "website": "https://youtube.com/c/DevTipsForDesigners"
+    "website": "https://youtube.com/c/DevTipsFordesign"
   },
   {
     "id": "3",
@@ -209,9 +209,9 @@
   {
     "id": "25",
     "subCount": "21,000",
-    "name": "The Simple Designers",
+    "name": "The Simple design",
     "description": "Illustration tutorials galore, tons of stuff to keep you busy for some time.",
-    "image": "the-simple-designers.jpg",
+    "image": "the-simple-design.jpg",
     "profession": "design",
     "website": "https://www.youtube.com/channel/UCU3feytkHYYS2CoIZKsSMlA"
   }

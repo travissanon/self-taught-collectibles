@@ -1,0 +1,54 @@
+{
+    "development":[
+       {
+            "id":"UCyIe-61Y8C4_o-zZCtO4ETQ",
+            "name":"DevTipsFordesign"
+       },
+       {
+            "id":"UClE-pN-OOQrRUwi6HFHmDpA",
+            "name":"DevMaterial"
+       },
+       {
+            "id":"UCoebwHSTvwalADTJhps0emA",
+            "name":"Wes Bos"
+       },
+       {
+            "id":"UC-8QAzbLcRglXeN_MY9blyw",
+            "name":"Ben Awad"
+       },
+       {
+            "id":"UC1fLEeYICmo3O9cUsqIi7HA",
+            "name": "Nick White"
+       },
+       {
+            "id":"UCSSBvqWNPq_qO3_W4EJiOAA",
+            "name": "Tren Black"
+       },
+       {
+            "id":"UCDrekHmOnkptxq3gUU0IyfA",
+            "name": "Devon Crawford"
+       }
+    ],
+    "design":[
+       {
+            "id":"UCTOwGti_mRb2J1JfTdIkg_w",
+            "name":"dannpetty"
+       },
+       {
+            "id":"UC-b3c7kxa5vU-bnmaROgvog",
+            "name":"TheSkoolRocks"
+       },
+       {
+            "id":"UCWUGGwfTfJ0-2jUS3dZqOJA",
+            "name":"Femke"
+       },
+       {
+            "id":"UCZHkx_OyRXHb1D3XTqOidRw",
+            "name":"Sketch Together"
+       },
+       {
+          "id":"UClpPhlJoGO8QCFIs_TMFv5Q",
+          "name":"Micah Carroll"
+     }
+    ]
+ }
