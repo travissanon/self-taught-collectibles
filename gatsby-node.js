@@ -31,23 +31,6 @@ exports.sourceNodes = async ({
   createNodeId,
   createContentDigest,
 }) => {
-  const pokemons = [
-    { name: 'Pikachu', type: 'electric' },
-    { name: 'Squirtle', type: 'water' },
-  ]
-  pokemons.forEach(pokemon => {
-    const node = {
-      name: pokemon.name,
-      type: pokemon.type,
-      id: createNodeId(`Pokemon-${pokemon.name}`),
-      internal: {
-        type: 'Pokemon',
-        contentDigest: createContentDigest(pokemon),
-      },
-    }
-    actions.createNode(node)
-  })
-
   const developerChannelData = creators.development.map(data =>
     getChannelData(data)
   )
@@ -84,7 +67,7 @@ exports.sourceNodes = async ({
   )
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions, getCache }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
     graphql(`
@@ -118,11 +101,13 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       let professions = []
+
       result.data.allCreators.nodes.forEach(node => {
         if (!professions.includes(node.profession)) {
           professions.push(node.profession)
         }
       })
+
       professions.forEach(profession => {
         createPage({
           path: `/${profession}`,
@@ -132,6 +117,7 @@ exports.createPages = ({ graphql, actions }) => {
           },
         })
       })
+
       resolve()
     })
   }).catch(error => {

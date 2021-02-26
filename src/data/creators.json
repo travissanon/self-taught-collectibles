@@ -27,6 +27,18 @@
        {
             "id":"UCDrekHmOnkptxq3gUU0IyfA",
             "name": "Devon Crawford"
+       },
+       {
+            "id":"UC29ju8bIPH5as8OGnQzwJyA",
+            "name": "Traversy Media"
+       },
+       {
+            "id":"UC5DNytAJ6_FISueUfzZCVsw",
+            "name": "Code with Ania Kubów"
+       },
+       {
+            "id":"UCsBjURrPoezykLs9EqgamOA",
+            "name": "Fireship"
        }
     ],
     "design":[
@@ -47,8 +59,28 @@
             "name":"Sketch Together"
        },
        {
-          "id":"UClpPhlJoGO8QCFIs_TMFv5Q",
-          "name":"Micah Carroll"
-     }
+            "id":"UClpPhlJoGO8QCFIs_TMFv5Q",
+            "name":"Micah Carroll"
+       },
+       {
+            "id":"UCwAIPYiSo3U1nNxkpo6tXIQ",
+            "name": "Jimmy Design"
+       },
+       {
+            "id":"UCN7dywl5wDxTu1RM3eJ_h9Q",
+            "name": "Flux"
+       },
+       {
+            "id":"UClYfiU4L1Ry7R6sgpZ_F9PQ",
+            "name": "Chunbuns"
+       },
+       {
+            "id":"UC-pvJrH1XXAu8i4_IdRXe9g",
+            "name": "Trupsfolio"
+       },
+       {
+            "id":"UCvBGFeXbBrq3W9_0oNLJREQ",
+            "name": "Jesse Showalter"
+       }
     ]
  }

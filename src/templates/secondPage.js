@@ -2,8 +2,6 @@ import React from 'react'
 import Layout from '../components/index'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from '../components/header'
-import Footer from '../components/footer'
 import Divider from '../components/divider'
 
 const capitalizeString = str => str.charAt(0).toUpperCase() + str.slice(1)
@@ -56,7 +54,6 @@ const SecondPage = ({ location }) => (
     `}
     render={data => (
       <Layout>
-        <Header />
         <div className="list-content">
           <div className="list-content__container">
             <div className="list-content__header">
@@ -84,7 +81,6 @@ const SecondPage = ({ location }) => (
             <People data={data} location={location.pathname.split('/').pop()} />
           </div>
         </div>
-        <Footer />
       </Layout>
     )}
   />
