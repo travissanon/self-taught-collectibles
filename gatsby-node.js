@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 const creators = require('./src/data/creators.json')
 
 const getChannelData = data => {
-  const API_KEY = `AIzaSyBaZwPWvScqvAc1tkWhJYUD3OYenQ2zgNA`
+  const API_KEY = process.env.GOOGLE_API_KEY
   const paramApiKey = API_KEY ? `key=${API_KEY}` : null
   const paramFilter = data.id
     ? `id=${data.id}`
