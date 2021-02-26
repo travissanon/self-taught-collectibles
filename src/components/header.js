@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 import logo from '../pages/vector.svg'
 
 class Header extends Component {
   constructor({ siteTitle }) {
-    super({ siteTitle });
-    this.state = { showMenu: false };
-    this.handleClick = this.handleClick.bind(this);
+    super({ siteTitle })
+    this.state = { showMenu: false }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
     this.setState(prevState => ({
-      showMenu: !prevState.showMenu
-    }));
+      showMenu: !prevState.showMenu,
+    }))
   }
 
   render() {
@@ -25,20 +25,22 @@ class Header extends Component {
           <Link to="/about">About</Link>
         </div>
       </div>
-    );
+    )
 
     return (
       <div>
         <header>
           <Link to="/" className={logo}>
-            <img src={logo}/>
+            <img src={logo} />
           </Link>
           <div className="nav nav-desktop">
             <Link to="/development">Development</Link>
             <Link to="/design">Design</Link>
             <Link to="/about">About</Link>
           </div>
-          <p className="nav-toggle" onClick={this.handleClick}>Menu</p>
+          <p className="nav-toggle" onClick={this.handleClick}>
+            Menu
+          </p>
           {this.state.showMenu ? menu : ''}
         </header>
       </div>

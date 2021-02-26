@@ -1,11 +1,10 @@
 import React from 'react'
 import Layout from '../components/index'
 import { StaticQuery, graphql } from 'gatsby'
-// import Img from "gatsby-image"
 
-import Header from '../components/header'
-import Footer from '../components/footer'
 import Divider from '../components/divider'
+
+const capitalizeString = str => str.charAt(0).toUpperCase() + str.slice(1)
 
 const SecondPage = ({ location }) => (
   <StaticQuery
@@ -25,48 +24,51 @@ const SecondPage = ({ location }) => (
           }
         }
 
-        allImageSharp {
-          edges {
-            node {
-              ... on ImageSharp {
-                fluid {
-                  src
-                  originalName
+        allCreators {
+          nodes {
+            id
+            profession
+            data {
+              items {
+                id
+                snippet {
+                  title
+                  description
+                  customUrl
+                  thumbnails {
+                    high {
+                      url
+                      width
+                      height
+                    }
+                  }
+                }
+                statistics {
+                  subscriberCount
                 }
               }
             }
           }
         }
-
-        allPeopleJson {
-          edges {
-            node {
-              id
-              subCount
-              name
-              description
-              image
-              profession
-              website
-            }
-          }
-        }
       }
     `}
-    // let windowLocation = location.pathname.split("/").pop();
     render={data => (
       <Layout>
         <div className="list-content">
           <div className="list-content__container">
             <div className="list-content__header">
               <h1>
-                {
+                {capitalizeString(
                   data.site.siteMetadata.professionTitle[
                     location.pathname.split('/').pop()
                   ]
-                }
+                )}
               </h1>
-              {console.log(data.site.siteMetadata.professionTitle)}
+              {console.log(
+                data.site.siteMetadata.professionTitle[
+                  location.pathname.split('/').pop()
+                ]
+              )}
               <p className="body body--primary">
                 {
                   data.site.siteMetadata.professionDescription[
@@ -85,34 +87,39 @@ const SecondPage = ({ location }) => (
 )
 
 const People = ({ data, location }) => {
-  let listOfPeople = []
-  {
-    data.allPeopleJson.edges.map(({ node }, i) => {
-      if (node.profession === location) {
-        listOfPeople.push(
-          <Person
-            person={node}
-            image={data.allImageSharp.edges.filter(
-              selection => selection.node.fluid.originalName === node.image
-            )}
-            key={i}
-          />
-        )
-      }
-    })
-  }
-  return <div className="list-content__people">{listOfPeople}</div>
+  let creators = []
+
+  data.allCreators.nodes.map((node, i) => {
+    const data = node.data.items[0]
+    if (node.profession === location) {
+      creators.push(
+        <Person
+          title={data.snippet.title}
+          description={data.snippet.description}
+          url={data.snippet.customUrl}
+          image={data.snippet.thumbnails.high.url}
+          subCount={data.statistics.subscriberCount}
+          key={i}
+        />
+      )
+    }
+  })
+
+  return <div className="list-content__people">{creators}</div>
 }
 
-const Person = ({ person, image, key }) => {
+const Person = ({ title, description, url, image, subCount, key }) => {
   return (
     <div className="list-content__person" key={key}>
-      <a href={person.website}>
-        <img src={image[0].node.fluid.src} />
+      <a href={url}>
+        <img src={image} />
       </a>
-      <p className="body body--secondary">Sub Count: {person.subCount}</p>
-      <h2>{person.name}</h2>
-      <p className="list-content__description">{person.description}</p>
+      <p className="body body--secondary">Sub Count: {subCount}</p>
+      <h2>{title}</h2>
+      <p className="list-content__description">{`${description.substring(
+        0,
+        150
+      )}...`}</p>
     </div>
   )
 }
