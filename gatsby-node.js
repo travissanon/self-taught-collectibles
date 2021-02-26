@@ -2,8 +2,13 @@ const path = require('path')
 const fetch = require('node-fetch')
 const creators = require('./src/data/creators.json')
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const getChannelData = data => {
   const API_KEY = process.env.GOOGLE_API_KEY
+  console.log(API_KEY)
   const paramApiKey = API_KEY ? `key=${API_KEY}` : null
   const paramFilter = data.id
     ? `id=${data.id}`
