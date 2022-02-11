@@ -18,7 +18,7 @@
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "node-fetch": "^2.6.1",
-    "node-sass": "5.0.0",
+    "node-sass": "7.0.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-helmet": "5.2.0"
